@@ -1,0 +1,45 @@
+.container{
+    position: relative;
+    max-width: 80%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+}
+
+
+.listPresent{
+    list-style: none;
+    font-size: 18px;
+    width: 200px;
+    text-align: center;
+    border: solid 2px black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.imagem{
+    max-width: 150px!important;
+}
+
+.btn{
+    border: none;
+    background-color: transparent;
+    max-width: 250px;
+    border-radius: 10px;
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+.form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    background-color: blue;
+}
