@@ -73,19 +73,19 @@ function Home(){
 
             <p className={styles.text}>
                 Olá, primeiramente gostariamos de agradecer pela sua presença em nosso site, ele foi criado com muito carinho e amor,
-                além de podermos nos apresentar melhor para vocês esse site também ficará guardado em nossos corações, espero que gostem
+                além de podermos nos apresentar melhor para vocês, esse site também ficará guardado em nossos corações, espero que gostem
                 e fiquem a vontade para navegar em nossa bela história.
             </p>
 
             <p className={styles.text}>
-                Somos Jardeson Reynaldo e Wilma Sarah, somos um jovem casal de 28 anos e 23 anos iniciamos a nossa história a 11 anos atrás
+                Somos Jardeson Reynaldo e Wilma Sarah, somos um jovem casal de 27 anos e 24 anos, iniciamos a nossa história a 11 anos atrás
                 uma história construída com muitas lutas e guerras, mas todas elas vencidas para honra e glória do nosso Deus que até aqui vem nos abençoado.
-                Somos pais da Jasmim uma jovem adolecente de 11 anos a qual amamos muito e lutamos diariamente para que no futuro ela possa escreve
+                Somos pais da Jasmim uma pré-adolecente de 10 anos a qual amamos muito e lutamos diariamente para que no futuro ela possa escreve
                 uma história ainda mais linda que a nossa. 
             </p>
 
             <p className={styles.text}>
-               Somos um casal que está sempre próximo da nossa família e nossos amigos, amamos uma aventura junto a todos eles pois são nessas aventuaras
+               Somos um casal que está sempre próximo da nossa família e nossos amigos, amamos uma aventura junto a todos eles pois são nessas aventuras
                que podemos viver e nos alegrar juntos. Convidamos você a conhecer um pouco mais dessa história atráves de um belo carrossel de fotos aqui em baixo.
             </p>
 
@@ -103,8 +103,8 @@ function Home(){
 
             <p className={styles.text}>
                Essas fotos representam um pouco da nossa história em imagens, um pouco do que vimos, sentimos e vivemos. Segundo <span className={styles.span}>Denise Campos </span>
-               Os momentos únicos da vida são vivenciados com alegria e registrados com um clique. Somos gratos ao nosso Deus por ter nos deixado viver cada momento desses e no dia 03 de Dezembro de 2023 
-               será mais um motivo de agradecimento e dessa vez poderemos agradecer com cada um de vocês, poderemos registrar com um clique mais um momento alegre em nossas vidas.
+               "Os momentos únicos da vida são vivenciados com alegria e registrados com um clique." Somos gratos ao nosso Deus por ter nos deixado viver cada momento desses e no dia 03 de Dezembro de 2023 
+               será mais um motivo de agradecimento realizaremos o nosso chá de casa nova e dessa vez poderemos agradecer com cada um de vocês, poderemos registrar com um clique mais um momento alegre em nossas vidas.
             </p>
 
 
