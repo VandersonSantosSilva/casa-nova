@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+.ContainerHome{
+    max-width: 90%;
+    margin: auto;
+}
+
+
+.Title{
+    font-family: 'Great Vibes', cursive;
+    font-size: 100px;
+    text-align: center;
+    
+}
+
+.text{
+    text-align: justify;
+    font-size: 18px;
+    font-family: 'Prata', serif;
+    font-weight: bold;
+    text-indent: 40px;
+    margin-bottom: 50px;
+}
+
+.inner{
+    display: flex;
+}
+
+.item{
+    min-height: 100px;
+    min-width: 200px;
+    padding: 14px;
+}
+
+.item img{
+    width: 100%;
+    height: 90%;
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+.carousel{
+    cursor: grab;
+    overflow: hidden;
+    max-width: 1000px;
+}
+
+.containerCarousel{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.span{
+    color: purple;
+
+}
+
+.linha{
+    border: 2px solid black;
+    margin-bottom: 50px;
+}
+
+.comentario{
+    font-family: 'Great Vibes', cursive;
+    font-size: 50px;
+    text-align: center;
+}
+
+.containerComentario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 90%;
+}
+
+.disable{
+    display: none;
+}
+
+input{
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    font-size: 18px;
+    text-align: center;
+    width: 41%;
+    box-sizing: border-box;
+}
+
+textarea{
+    max-height: 300px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-align: center;
+    width: 41%;
+    box-sizing: border-box;
+}
+
+.btnEnviar{
+    width: 150px;
+    text-transform: uppercase;
+    font-family: 'Prata', serif;
+    font-weight: bold;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.btnEnviar:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+    background-color: purple;
+    color: white;
+    box-shadow: 5px 5px 20px rgba(128, 0, 128, 0.5);
+    cursor: url("../Imagens/Undertale\ Normal\ Cursor.cur"), auto;
+}
+
+.comentariosFixed {
+    max-width:650px;
+    height: 300px; /* Adicione uma altura para garantir que a barra de rolagem apareça */
+    margin: auto;
+    margin-bottom: 50px;
+    overflow: auto;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0px 15px;
+}
+
+li{
+    margin: 0;
+    padding: 0;
+}
+
+.h3Comentario{
+    padding: 0;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    background-image: linear-gradient(to left, transparent, #a7a7a7e5);
+    color:white;
+    font-family: 'Prata', serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.pComentario{
+    margin: auto;
+    padding: 0;
+    max-width: 590px;
+    text-indent: 40px;
+    text-align: justify;
+    margin-bottom: 15px;
+    font-family: 'Prata', serif;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 800px) {
+    textarea{
+        width: 100%;
+    }
+
+    input{
+        width: 100%;
+    }
+
+    .Title{
+        font-size: 47px;
+        text-align: center;
+    }
+
+    .text{
+        font-size: 17px;
+        margin: auto;
+        margin-bottom: 30px;
+        text-align: center;
+        text-indent: 0px;
+    }
+
+    .comentario{
+        font-size: 47px;
+    }
+    
+}

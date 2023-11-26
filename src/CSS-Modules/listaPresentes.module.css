@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
 .container{
     position: relative;
     max-width: 80%;
@@ -8,6 +10,12 @@
     margin: auto;
 }
 
+.store{
+    display: block;
+    font-family: 'Great Vibes', cursive;
+    font-size: 100px;
+    text-align: center;
+}
 
 .listPresent{
     list-style: none;
@@ -22,7 +30,8 @@
 }
 
 .imagem{
-    max-width: 150px!important;
+    width: 150px!important;
+    height: 150px;
 }
 
 .btn{
@@ -118,13 +127,22 @@
     color: red;
 }
 
-
 @media screen and (max-width: 800px) {
 
+    
     .imagem{
-        
-        max-width: 80px!important;
+        width: 80px!important;
+        height: 90px;
     }
+    
+
+    .store{
+        display: block;
+        font-family: 'Great Vibes', cursive;
+        font-size: 49px;
+        text-align: center;
+    }
+    
 
     .container{
         flex-direction: row;
