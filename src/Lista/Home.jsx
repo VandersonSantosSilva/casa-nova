@@ -8,12 +8,12 @@ import { useDispatch, useSelector } from "react-redux"
 
 
 function Home(){
-    const sl1 = "https://i.ibb.co/56vfGfD/DSC00281.jpg"
+    const sl1 = "https://i.ibb.co/PFgBSKj/Screenshot-eee.png"
     const sl2 = "https://i.ibb.co/QjfnZWx/Screenshot-2.png"
     const sl3 = "https://i.ibb.co/xLrXGdn/Screenshot-2-qq.png"
     const sl4 = "https://i.ibb.co/897kfH4/Screenshot-2-t.png"
     const sl5 = "https://i.ibb.co/V9bWdkX/Screenshot-2-tt.png"
-    const sl6 = "https://i.ibb.co/PFgBSKj/Screenshot-eee.png"
+    const sl6 = "https://i.ibb.co/56vfGfD/DSC00281.jpg"
     const image = [sl1, sl2, sl3, sl4, sl5, sl6]
     const fb = "Comentarios"
     const sgbd = collection(db, fb)
