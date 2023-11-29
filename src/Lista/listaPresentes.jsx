@@ -3,6 +3,8 @@ import styles from "../CSS-Modules/listaPresentes.module.css"
 import {useState } from "react"
 import { updateDoc, doc, setDoc} from "firebase/firestore";
 import {db} from "./fire-store"
+import { useNavigate } from "react-router-dom";
+
 
 
 function List(){
@@ -61,7 +63,6 @@ function List(){
                 phone: localPhone,
                 presente: present
             })
-            console.log("item adicionado com exito!")
         } catch (error) {
             console.log("Item não adcionado", error)
         }
@@ -70,8 +71,6 @@ function List(){
     }
 
 
-     
-      
     return (
 
         <div>

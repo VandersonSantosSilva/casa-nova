@@ -32,6 +32,9 @@ function Reducers(state = {
             Comentario: action.payload.Comentario
           });
           break;
+          case "LIMPAR_COMENTARIOS":
+            draft.comentarios = []
+            break;
         default:
           return state
       }

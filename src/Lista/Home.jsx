@@ -24,7 +24,6 @@ function Home(){
     const [coment, setComent] = useState("")
     const coomentario = useSelector((state) => state.comentarios)
 
-
     useEffect(()=>{
         setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth)
 
@@ -46,11 +45,20 @@ function Home(){
             Comentario: coment
         })
 
-        window.location.reload()
+        setName("")
+        setComent("")
+
+        comenta()
     }
 
     const comenta = async ()=>{
+
+        dispatch({
+            type: "LIMPAR_COMENTARIOS"
+        })
+
         const push = await getDocs(sgbd)
+        
         push.forEach((comentaario) =>{
             dispatch({
                 type: "COMENTARIOS",
@@ -60,6 +68,8 @@ function Home(){
                 }
             })
         })
+
+
     }
 
     useEffect(()=>{
@@ -67,6 +77,16 @@ function Home(){
     },[])
 
 
+    const comentarios = coomentario.map((menssagem) => {
+        return(
+            <div key={menssagem.Nome}>
+                <li><h3 className={styles.h3Comentario}>{menssagem.Nome}</h3></li>
+                <li><p className={styles.pComentario}>{menssagem.Comentario}</p></li>
+            </div>
+        )
+    })
+
+   
     return(
         <div className={styles.ContainerHome}>
             <h1 className={styles.Title}>Sejam Bem-vindos!</h1>
@@ -103,7 +123,7 @@ function Home(){
 
             <p className={styles.text}>
                Essas fotos representam um pouco da nossa história em imagens, um pouco do que vimos, sentimos e vivemos. Segundo <span className={styles.span}>Denise Campos </span>
-               "Os momentos únicos da vida são vivenciados com alegria e registrados com um clique." Somos gratos ao nosso Deus por ter nos deixado viver cada momento desses e no dia 03 de Dezembro de 2023 
+               "Os momentos únicos da vida são vivenciados com alegria e registrados com um clique." Somos gratos ao nosso Deus por ter nos deixado viver cada momento desses e no dia 09 de Dezembro de 2023 
                será mais um motivo de agradecimento realizaremos o nosso chá de casa nova e dessa vez poderemos agradecer com cada um de vocês, poderemos registrar com um clique mais um momento alegre em nossas vidas.
             </p>
 
@@ -118,14 +138,9 @@ function Home(){
 
             <h3 className={styles.comentario}>Deixe sua menssagem!</h3>
             <div className={coomentario.length === 0 ? styles.disable : styles.comentariosFixed }>
-                    {coomentario.map((menssagem) => {
-                        return(
-                            <ul key={menssagem.Nome}>
-                                <li><h3 className={styles.h3Comentario}>{menssagem.Nome}</h3></li>
-                                <li><p className={styles.pComentario}>{menssagem.Comentario}</p></li>
-                            </ul>
-                        )
-                    })}
+                <ul>
+                {comentarios}
+                </ul>
             </div>
             <div className={styles.containerComentario}>
                 <input value={name} onChange={valor} type="text" name="nome" id="name" placeholder="Digite seu nome"/>
