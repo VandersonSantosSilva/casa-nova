@@ -4,7 +4,7 @@ function Reducers(state = {
   itens: [],
   selecionar: {Select: false, Item: null},
   acesso: true,
-  comentarios: []
+  comentarios: [],
 }, action) {
 
     return produce(state, (draft) => {

@@ -8,6 +8,7 @@
     text-align: center;
     justify-content: center;
     margin: auto;
+    z-index: 0;
 }
 
 .store{
@@ -156,7 +157,7 @@
         font-size: 13px;
     }
 
-    ul{
+    .ulPrensents{
         padding: 0;
     }
 

@@ -1,9 +1,10 @@
 import { useSelector, useDispatch } from "react-redux"
 import styles from "../CSS-Modules/listaPresentes.module.css"
-import {useState } from "react"
+import {useEffect, useState } from "react"
 import { updateDoc, doc, setDoc} from "firebase/firestore";
 import {db} from "./fire-store"
 import { useNavigate } from "react-router-dom";
+
 
 
 
@@ -15,6 +16,24 @@ function List(){
     const [localNome, setLocalNome] = useState("") 
     const [localEmail, setLocalEmail] = useState("") 
     const [localPhone, setLocalPhone] = useState("") 
+    const navigate = useNavigate()
+
+
+    
+    const disponibilidade = itens.map((item_disponibilidade)=>{
+        return(
+            <button className={styles.btn} onClick={() => selecionar(item_disponibilidade.Nome)} key={item_disponibilidade.Nome} disabled={item_disponibilidade.Disponibilidade === "Indisponível"}>
+                <li className={styles.listPresent} key={item_disponibilidade.Nome}>
+                    <img className={styles.imagem} src={item_disponibilidade.Imagem} alt="Imagem"/>
+                    <h3>{item_disponibilidade.Nome}</h3>
+                    <h4 className={item_disponibilidade.Disponibilidade === "Disponível" ? styles.disponivel : styles.indisponivel}>{item_disponibilidade.Disponibilidade}</h4>
+                </li>
+            </button>
+        )
+    })
+
+   
+    
 
     const selecionar = (item) =>{
         dispatch({
@@ -22,6 +41,7 @@ function List(){
             payload: {Select: true, Item: item}
         })
     }
+
 
     const fechar = ()=>{
         dispatch({
@@ -45,7 +65,6 @@ function List(){
 
 
     async function confirmdPresent() {
-
         try {
             const itemRef = doc(db, "Presentes", present)
             await updateDoc(itemRef, {
@@ -70,7 +89,6 @@ function List(){
         window.location.reload()
     }
 
-
     return (
 
         <div>
@@ -90,19 +108,8 @@ function List(){
                     </div>
                 )}
 
-                <ul>
-                    {itens.map((item) =>{
-                        return(
-                            
-                            <button className={styles.btn} onClick={() => selecionar(item.Nome)} key={item.Nome} disabled={item.Disponibilidade === "Indisponível"}>
-                                <li className={styles.listPresent} key={item.Nome}>
-                                    <img className={styles.imagem} src={item.Imagem} alt="Imagem"/>
-                                    <h3>{item.Nome}</h3>
-                                    <h4 className={item.Disponibilidade === "Disponível" ? styles.disponivel : styles.indisponivel}>{item.Disponibilidade}</h4>
-                                </li>
-                            </button>
-                        )
-                    })}
+                <ul className={styles.ulPrensents}>
+                    {disponibilidade}
                 </ul>
 
             </div>
